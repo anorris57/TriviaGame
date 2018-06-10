@@ -1,6 +1,6 @@
 
 
-var number = 20;
+var number = 60;
 
 var intervalID;
 //Changing line #7
@@ -21,7 +21,7 @@ function decrement() {
 
   number--;
   //  Show the number in the #show-number tag.
-  $("#showNumber").html("<h2>" + number + "</h2>");
+  $("#showNumber").html("<h2>Time Remaining: " + number + " Seconds</h2>");
   //  Once number hits zero...
   if (number === 0) {
     //  ...run the stop function.
@@ -66,7 +66,7 @@ function submitAnswers() {
     }
   }
   //console.log(score);
- $("#results").html('<h3>Done</h3><br>Correct Answers:  '+ score + '<br>Incorrect Answers: '+ (total - score) + '<br> Unanswered: ' + unAnswered);
+ $("#results").html('<h3>Done</h3>Correct Answers:  '+ score + '<br><br>Incorrect Answers: '+ (total - score) + '<br><br> Unanswered: ' + unAnswered);
   
   return false;
 }
