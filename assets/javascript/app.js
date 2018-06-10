@@ -1,10 +1,16 @@
-//alert("working");
 
-var number = 100;
+
+var number = 20;
 
 var intervalID;
+//Changing line #7
+$("#start").click(function(){
+  run();
+  $("#hideStart").hide();
+  $("form").removeClass("hidden");
+  $("#end").removeClass("hidden");
 
-$("#start").on("click", run);
+});//end for start
 
 function run() {
   
@@ -15,7 +21,7 @@ function decrement() {
 
   number--;
   //  Show the number in the #show-number tag.
-  $("#show-number").html("<h2>" + number + "</h2>");
+  $("#showNumber").html("<h2>" + number + "</h2>");
   //  Once number hits zero...
   if (number === 0) {
     //  ...run the stop function.
@@ -25,6 +31,8 @@ function decrement() {
 
 function stop () {
   clearInterval(intervalID);
+  $("#viewQuestions").hide();
+  $("#end").hide();
   submitAnswers();
 }
   
@@ -48,17 +56,17 @@ function submitAnswers() {
     //Set Correct Answers
   var answers = ["a","c","d","a","b","b","d","b"];
 
-  //Check Answers
+  //Check Answers changing order to try and get correct output/don't change
   for(i = 1; i <= total; i++) {
+    if(eval('q' + i) !== (answers[i - 1]) && (eval('q' + i) === false)) {
+      unAnswered++;
+    }
     if(eval('q' + i) === answers[i - 1]) {
       score++;
     }
-    if(eval('q' + i) !== (answers[i - 1]) && (eval('q' + i) === null)) {
-      unAnswered++;
-    }
   }
-  console.log(score);
- $("#show-number").html('<h3>Done</h3><br>Correct Answers:  '+ score + '<br>Incorrect Answers: '+ (total - score) + '<br> Unanswered: ' + unAnswered);
+  //console.log(score);
+ $("#results").html('<h3>Done</h3><br>Correct Answers:  '+ score + '<br>Incorrect Answers: '+ (total - score) + '<br> Unanswered: ' + unAnswered);
   
   return false;
 }

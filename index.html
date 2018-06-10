@@ -17,13 +17,14 @@
         <h1> Totally Trivial Trivia </h1>
       </header>
 
-      <section>
+      <section id="hideStart">
         <button id="start">Start</button>
       </section>
 
-      <form name="quizForm" onsubmit="return submitAnswers()">
 
-        <section id="show-number"></section>
+      <form  id="viewQuestions" class="hidden" name="quizForm" onsubmit="return submitAnswers()">
+
+        <section id="showNumber"></section>
 
         <h3>1. What is the front of a ship called?</h3>
           <input type="radio" name ="q1" value="a" id="q1a"> a. bowsprit<br>
@@ -53,7 +54,7 @@
           <input type="radio" name ="q5" value="c" id="q5c"> c. hold<br>
           <input type="radio" name ="q5" value="d" id="q5d"> d. keel<br>
 
-        <h3>6. The right side of the ship as you the front of the ship.</h3>
+        <h3>6. The right side of the ship as you face the front of the ship.</h3>
           <input type="radio" name ="q6" value="a" id="q6a"> a. port<br>
           <input type="radio" name ="q6" value="b" id="q6b"> b. starboard<br>
           <input type="radio" name ="q6" value="c" id="q6c"> c. right<br>
@@ -70,9 +71,11 @@
           <input type="radio" name ="q8" value="b" id="q8b"> b. False<br>
           <br><br>
 
-        <button type="submit" id="end" form="quizForm" value="Submit">Done</button>
+      </form>
+    
+      <button type="submit" id="end" class=" hidden" form="quizForm" value="Submit">Done</button>
 
-      </section>
+
 
       <div id="results"></div>
     
