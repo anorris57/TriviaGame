@@ -41,7 +41,7 @@ $("#end").on("click", stop);
 function submitAnswers() {
   var total = 8;
   var score = 0;
-  var unAnswered = 0;
+  
 
   //Get User Input
   var q1 = document.forms["quizForm"] ["q1"].value;//gives value of user's choice
@@ -58,15 +58,15 @@ function submitAnswers() {
 
   //Check Answers changing order to try and get correct output/don't change
   for(i = 1; i <= total; i++) {
-    if(eval('q' + i) !== (answers[i - 1]) && (eval('q' + i) === false)) {
-      unAnswered++;
-    }
     if(eval('q' + i) === answers[i - 1]) {
       score++;
-    }
+    } 
   }
+  
+
+
   //console.log(score);
- $("#results").html('<h3>Done</h3>Correct Answers:  '+ score + '<br><br>Incorrect Answers: '+ (total - score) + '<br><br> Unanswered: ' + unAnswered);
+ $("#results").html('<h3>Done</h3>Correct Answers:  '+ score + '<br><br>Incorrect Answers: '+ (total - score) );
   
   return false;
 }

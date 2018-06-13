@@ -12,6 +12,7 @@ body, html  {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
 }
 
 header {
@@ -47,6 +48,7 @@ form, #results {
    padding-right: 50px;
    padding-bottom: 5px;
    padding-left: 50px;
+ 
  }
 
  #results {
@@ -57,7 +59,7 @@ form, #results {
  }
 
  div form {
-   height: 800px;
+   max-height: 600px;
    overflow: auto;
   
  }
