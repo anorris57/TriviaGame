@@ -1,101 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Triva Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-      
-    
-  
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Triva Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body class="bg">
-      <header>
-        <h1> Totally Trivial Trivia </h1>
-
-        <section id="hideStart">
-          <button id="start">Start</button>
-        </section>
-
-      </header>
-
-      <div id="container">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 
-      <form  id="viewQuestions" class="hidden" name="quizForm" onsubmit="return submitAnswers()">
 
-        <section id="showNumber"></section>
+</head>
 
-        <h3>1. What is the front of a ship called?</h3>
-          <input type="radio" name ="q1" value="a" id="rdSelectq1"> a. bowsprit<br>
-          <input type="radio" name ="q1" value="b" id="rdSelectq1"> b. bow<br>
-          <input type="radio" name ="q1" value="c" id="rdSelectq1"> c. bulkhead<br>
-          <input type="radio" name ="q1" value="d" id="rdSelectq1"> d. broadside<br>
+<body class="bg">
+  <header>
+    <h1> Totally Trivial Trivia </h1>
 
-        <h3>2. What is a passage along either side of a ship's upper deck.</h3>
-          <input type="radio" name ="q2" value="a" id="rdSelectq2"> a. gunnel<br>
-          <input type="radio" name ="q2" value="b" id="rdSelectq2"> b. gangplank<br>
-          <input type="radio" name ="q2" value="c" id="rdSelectq2"> c. gangway<br>
-          <input type="radio" name ="q2" value="d" id="rdSelectq2"> d. gunwale<br>
+    <section id="hideStart">
+      <button id="start">Start</button>
+    </section>
 
-        <h3>3. The longest mast located in the middle of the ship.</h3>
-          <input type="radio" name ="q3" value="a" id="rdSelectq3"> a. mizzenmast<br>
-          <input type="radio" name ="q3" value="b" id="rdSelectq3"> b. foremast<br>
-          <input type="radio" name ="q3" value="c" id="rdSelectq3"> c. midmast<br>
-          <input type="radio" name ="q3" value="d" id="rdSelectq3"> d. main<br>
+  </header>
 
-        <h3>4. The stern is the rear part ot the ship.</h3>
-          <input type="radio" name ="q4" value="a" id="rdSelectq4"> a. True<br>
-          <input type="radio" name ="q4" value="b" id="rdSelectq4"> b. False<br>
+  <div id="container">
 
-        <h3>5. The body of a ship.</h3>
-          <input type="radio" name ="q5" value="a" id="rdSelectq5"> a. helm<br>
-          <input type="radio" name ="q5" value="b" id="rdSelectq5"> b. hull<br>
-          <input type="radio" name ="q5" value="c" id="rdSelectq5"> c. hold<br>
-          <input type="radio" name ="q5" value="d" id="rdSelectq5"> d. keel<br>
 
-        <h3>6. The right side of the ship as you face the front of the ship.</h3>
-          <input type="radio" name ="q6" value="a" id="rdSelectq6"> a. port<br>
-          <input type="radio" name ="q6" value="b" id="rdSelectq6"> b. starboard<br>
-          <input type="radio" name ="q6" value="c" id="rdSelectq6"> c. right<br>
-          <input type="radio" name ="q6" value="d" id="rdSelectq6"> d. aft<br>
+    <form id="viewQuestions" class="hidden" name="quizForm" onsubmit="return submitAnswers()">
 
-        <h3>7. The deck where all the activites are controlled when in port.</h3>
-          <input type="radio" name ="q7" value="a" id="rdSelectq7"> a. weather deck<br>
-          <input type="radio" name ="q7" value="b" id="rdSelectq7"> b. bridge deck<br>
-          <input type="radio" name ="q7" value="c" id="rdSelectq7"> c. poop deck<br>
-          <input type="radio" name ="q7" value="d" id="rdSelectq7"> d. quarter deck<br>
+      <section id="showNumber"></section>
 
-        <h3>8. Stairs are called stairs on ships.</h3>
-          <input type="radio" name ="q8" value="a" id="rdSelectq8"> a. True <br>
-          <input type="radio" name ="q8" value="b" id="rdSelectq8"> b. False<br>
-          <br><br>    
+      <h3>1. What is the front of a ship called?</h3>
+      <input type="radio" name="q1" value="a" id="rdSelectq1"> a. bowsprit
+      <br>
+      <input type="radio" name="q1" value="b" id="rdSelectq1"> b. bow
+      <br>
+      <input type="radio" name="q1" value="c" id="rdSelectq1"> c. bulkhead
+      <br>
+      <input type="radio" name="q1" value="d" id="rdSelectq1"> d. broadside
+      <br>
+
+      <h3>2. What is a passage along either side of a ship's upper deck.</h3>
+      <input type="radio" name="q2" value="a" id="rdSelectq2"> a. gunnel
+      <br>
+      <input type="radio" name="q2" value="b" id="rdSelectq2"> b. gangplank
+      <br>
+      <input type="radio" name="q2" value="c" id="rdSelectq2"> c. gangway
+      <br>
+      <input type="radio" name="q2" value="d" id="rdSelectq2"> d. gunwale
+      <br>
+
+      <h3>3. The longest mast located in the middle of the ship.</h3>
+      <input type="radio" name="q3" value="a" id="rdSelectq3"> a. mizzenmast
+      <br>
+      <input type="radio" name="q3" value="b" id="rdSelectq3"> b. foremast
+      <br>
+      <input type="radio" name="q3" value="c" id="rdSelectq3"> c. midmast
+      <br>
+      <input type="radio" name="q3" value="d" id="rdSelectq3"> d. main
+      <br>
+
+      <h3>4. The stern is the rear part ot the ship.</h3>
+      <input type="radio" name="q4" value="a" id="rdSelectq4"> a. True
+      <br>
+      <input type="radio" name="q4" value="b" id="rdSelectq4"> b. False
+      <br>
+
+      <h3>5. The body of a ship.</h3>
+      <input type="radio" name="q5" value="a" id="rdSelectq5"> a. helm
+      <br>
+      <input type="radio" name="q5" value="b" id="rdSelectq5"> b. hull
+      <br>
+      <input type="radio" name="q5" value="c" id="rdSelectq5"> c. hold
+      <br>
+      <input type="radio" name="q5" value="d" id="rdSelectq5"> d. keel
+      <br>
+
+      <h3>6. The right side of the ship as you face the front of the ship.</h3>
+      <input type="radio" name="q6" value="a" id="rdSelectq6"> a. port
+      <br>
+      <input type="radio" name="q6" value="b" id="rdSelectq6"> b. starboard
+      <br>
+      <input type="radio" name="q6" value="c" id="rdSelectq6"> c. right
+      <br>
+      <input type="radio" name="q6" value="d" id="rdSelectq6"> d. aft
+      <br>
+
+      <h3>7. The deck where all the activites are controlled when in port.</h3>
+      <input type="radio" name="q7" value="a" id="rdSelectq7"> a. weather deck
+      <br>
+      <input type="radio" name="q7" value="b" id="rdSelectq7"> b. bridge deck
+      <br>
+      <input type="radio" name="q7" value="c" id="rdSelectq7"> c. poop deck
+      <br>
+      <input type="radio" name="q7" value="d" id="rdSelectq7"> d. quarter deck
+      <br>
+
+      <h3>8. Stairs are called stairs on ships.</h3>
+      <input type="radio" name="q8" value="a" id="rdSelectq8"> a. True
+      <br>
+      <input type="radio" name="q8" value="b" id="rdSelectq8"> b. False
+      <br>
+      <br>
+      <br>
       <button type="submit" id="end" class=" hidden" form="quizForm" value="Submit">Done</button>
 
-      </form>
-    
+    </form>
 
 
 
-      <div id="results"></div>
-    
 
-     </div>
+    <div id="results"></div>
 
 
-    
+  </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
-     
-    <script src="assets/javascript/app.js"></script>
-  
-    
-     
-    
 
-    
-   </body>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="assets/javascript/app.js"></script>
+
+
+
+
+
+
+</body>
+
 </html>
